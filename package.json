@@ -1,7 +1,7 @@
 {
-  "name": "my-webpack-project",
+  "name": "diagnostic-report-viewer",
   "version": "1.0.0",
-  "description": "My webpack project",
+  "description": "Diagnostic Report Viewer",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,20 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mpstanford/office-hours.git"
+    "url": "git+https://github.com/mpstanford/binary-renderer.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mpstanford/office-hours/issues"
+    "url": "https://github.com/mpstanford/binary-renderer/issues"
   },
-  "homepage": "https://github.com/mpstanford/office-hours#readme",
+  "homepage": "https://github.com/mpstanford/binary-renderer#readme",
   "dependencies": {
     "express": "^4.17.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-table": "^7.7.0"
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
