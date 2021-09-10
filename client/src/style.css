@@ -40,11 +40,10 @@ th, td {
 }
 
 #instructions {
-  width: 80vw;
+  width: 70vw;
   font-size: 22px;
-  padding: 30px;
 }
 
 #instructions > div {
-  margin: 10px;
+  margin: 20px;
 }
