@@ -5,7 +5,6 @@ import Pdf from './Pdf.jsx';
 import ReturnedMedications from './ReturnedMedications.jsx';
 import DetectedIssues from './DetectedIssues.jsx';
 
-<<<<<<< HEAD:client/components/App.jsx
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -44,7 +43,14 @@ class App extends React.Component {
     return (
       <>
       <h1>Diagnostic Report Viewer</h1>
-      <div id='instructions'>Please call $process-message/diagnosticreport-provide and paste the JSON response here. Set returnMedications and returnDetectedIssues to true to see a summary of those sections in table format.</div>
+      <div id='instructions'>
+        <div>
+        Please call $process-message/diagnosticreport-provide and paste the JSON response here. Set returnMedications and returnDetectedIssues to true to see a summary of those sections in table format.
+        </div>
+        <div>
+        In case you want to do a deeper analysis, the fastest way to get this data into Excel is ctrl+A > ctrl+C > ctrl+V.
+        </div>
+      </div>
         <Input updateData={this.updateData}/>
 
         {this.state.data.entry.length > 0 &&
@@ -63,15 +69,6 @@ class App extends React.Component {
   }
 
 }
-||||||| 94f12c3:client/components/App.jsx
-const App = () => (
-  <div>This text is in client/components/App.jsx</div>
-);
-=======
-const App = () => (
-  <div>This text is in client/src/components/App.jsx</div>
-);
->>>>>>> bbbf4285d6fcad82eff1868f14d092cf1752a582:client/src/components/App.jsx
 
 export default App;
 
