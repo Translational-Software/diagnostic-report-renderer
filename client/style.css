@@ -1,5 +1,46 @@
 body {
-  background-color: darkcyan;
-  color: white;
   text-align: center;
+}
+
+textarea {
+  width: 90vw;
+  height: 60vh;
+}
+
+body, #app, form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+input {
+  cursor: pointer;
+}
+
+div.redText {
+  color: red;
+  width: 90vw;
+  height: 30vh;
+  border: 3px solid red;
+  padding: auto auto;
+  text-align: center;
+  vertical-align: center;
+  margin: auto 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse !important;
+}
+
+th, td {
+  padding: 5px 20px;
+}
+
+#instructions {
+  width: 80vw;
+  font-size: 22px;
+  padding: 30px;
 }
