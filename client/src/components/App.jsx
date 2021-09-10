@@ -5,6 +5,7 @@ import Pdf from './Pdf.jsx';
 import ReturnedMedications from './ReturnedMedications.jsx';
 import DetectedIssues from './DetectedIssues.jsx';
 
+<<<<<<< HEAD:client/components/App.jsx
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -62,6 +63,15 @@ class App extends React.Component {
   }
 
 }
+||||||| 94f12c3:client/components/App.jsx
+const App = () => (
+  <div>This text is in client/components/App.jsx</div>
+);
+=======
+const App = () => (
+  <div>This text is in client/src/components/App.jsx</div>
+);
+>>>>>>> bbbf4285d6fcad82eff1868f14d092cf1752a582:client/src/components/App.jsx
 
 export default App;
 

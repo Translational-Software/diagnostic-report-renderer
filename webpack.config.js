@@ -32,13 +32,17 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './client/index.jsx',
+  entry: './client/src/index.jsx',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'client/dist')
+  },
   plugins: [new webpack.ProgressPlugin()],
 
   module: {
     rules: [{
       test: /\.(js|jsx)$/,
-      include: [path.resolve(__dirname, 'client')],
+      include: [path.resolve(__dirname, 'client/src')],
       loader: 'babel-loader'
     }, {
       test: /.css$/,
