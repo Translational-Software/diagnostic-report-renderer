@@ -24,6 +24,8 @@ const DetectedIssue = ({detectedIssue}) => {
         <td>{medications.map((medication, i) => <p key={i}>{medication}</p>)}</td>
         <td>{medicationStatements.map((medicationStatement, i) => <p key={i}>{medicationStatement}</p>)}</td>
         <td>{observations.map((observation, i) => <p key={i}>{observation}</p>)}</td>
+        <td>{detectedIssue.extension[0].url.indexOf('EvidenceStrength') !== -1 ? detectedIssue.extension[0].valueString : ''}</td>
+        <td>{detectedIssue.extension[0].url.indexOf('EvidenceStrength') !== -1 ? detectedIssue.extension[1].valueString : detectedIssue.extension[0].valueString}</td>
 
     </tr>
   );

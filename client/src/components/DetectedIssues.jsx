@@ -13,6 +13,8 @@ const DetectedIssues = ({detectedIssues}) => {
             <th>Medication(s)</th>
             <th>MedicationStatement(s)</th>
             <th>Observation(s)</th>
+            <th>EvidenceStrength</th>
+            <th>Title</th>
           </tr>
         </thead>
         <tbody>
