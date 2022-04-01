@@ -8,6 +8,7 @@ const ReturnedMedications = ({returnedMedications}) => {
     let drugClassString = '';
     let isPgxRelevantString = '';
     let categoryString = '';
+    let geneString = '';
     let medicationString = el.ingredient[0].itemReference.display;
     let extensions = el.extension;
     for (var i = 0; i < extensions.length; i++) {
@@ -31,6 +32,18 @@ const ReturnedMedications = ({returnedMedications}) => {
         drugClassString = extensions[i].valueString;
       }
 
+      if (extensions[i].extension) {
+        for (var j = 0; j < extensions[i].extension.length; j++) {
+          let geneObject = extensions[i].extension[j]
+          // if (geneObject.url === 'http://hl7.org/fhir/StructureDefinition/geneticsGene') {
+            for (var k = 0; k < geneObject.valueCodeableConcept.coding.length; k++) {
+              let gene = geneObject.valueCodeableConcept.coding[k];
+              geneString += `${gene.display}, `
+            }
+          // }
+        }
+      }
+
 
 
 
@@ -40,7 +53,8 @@ const ReturnedMedications = ({returnedMedications}) => {
       'category': categoryString,
       'isPgxRelevant': isPgxRelevantString,
       'drugClass': drugClassString,
-      'preAlertTrigger': prealertTriggerString
+      'preAlertTrigger': prealertTriggerString,
+      'genes': geneString
     });
 
   });
@@ -71,6 +85,7 @@ const ReturnedMedications = ({returnedMedications}) => {
             <th>Medication</th>
             <th>isPgxRelevant</th>
             <th>Pre-Alert Trigger</th>
+            <th>Genes</th>
           </tr>
         </thead>
 
@@ -82,6 +97,7 @@ const ReturnedMedications = ({returnedMedications}) => {
           <td><p>{el.medication}</p></td>
           <td><p>{el.isPgxRelevant}</p></td>
           <td><p>{el.preAlertTrigger}</p></td>
+          <td><p>{el.genes}</p></td>
         </tr>
       ))}
       </tbody>
