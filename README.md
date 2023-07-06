@@ -1,22 +1,12 @@
-# React/Node/Express Sandbox
-
-This repo is a bare-bones React/Node/Express application that can serve as a starting point for your sandboxing.
-
+# Diagnostic Report Renderer
 ```
 npm install
 ```
-
-### In two separate terminals:
 ```
 npm run build
 ```
-
 ```
 npm start
 ```
 
-### Store each project on a separate branch so that you can always start fresh with a clean sandbox:
-```
-git checkout -b <branch-name>
-```
-
+The purpose of this application is to facilitate parsing the $process-message/diagnosticreport-provide json response. So far it shows the PDF (rendered from binary), PIM table, and Detected Issues, but it could be improved to show all report sections.
